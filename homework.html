@@ -103,15 +103,29 @@
     // Define function getUSA()
     // Find the html element that contains "USA" in the data-customAttr.
     // Print that element's contents.
-function getUSA(){
-    let usOfAContents = document.querySelectorAll("span").item(1).innerHTML;
-    console.log(usOfAContents);
-}
-getUSA();
+    function getUSA(){
+        let usOfAContents = document.querySelectorAll("span").item(1).innerHTML;
+        console.log(usOfAContents);
+        for(let i = 0 ; i<usOfAContents.length;i++){
+
+        }
+    }
+    getUSA();
+
     // 2. Sales
     // Define function getPeopleInSales()
     // Print the names of all the people in the sales department.
 
+    // .item(1).getElementsByTagName("td").item(1).innerHTML
+
+    function getPeopleInSales(){
+        let peopleInSales = document.getElementsByTagName("tr");
+        for(let i = 1;i<peopleInSales.length-1;i++){
+            if(peopleInSales.item(i).getElementsByTagName("td").item(1).innerHTML == "Sales")
+            console.log(peopleInSales.item(i).getElementsByTagName("td").item(0).innerHTML);
+        }
+    }
+    getPeopleInSales();
 
     // 3. Click Here
     // Define function getAnchorChildren()
