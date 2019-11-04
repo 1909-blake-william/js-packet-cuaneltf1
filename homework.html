@@ -104,12 +104,10 @@
     // Find the html element that contains "USA" in the data-customAttr.
     // Print that element's contents.
     function getUSA(){
-        let usOfAContents = document.querySelectorAll("span").item(1).innerHTML;
+        let usOfAContents = document.querySelector('[data-customAttr').innerHTML;
         console.log(usOfAContents);
-        for(let i = 0 ; i<usOfAContents.length;i++){
-
-        }
     }
+	  
     getUSA();
 
     // 2. Sales
@@ -161,6 +159,13 @@
 
     function getCustomAttribute(){
 
+      let customA = document.querySelectorAll('[data-customAttr]');
+      for (let k = 0; k<customA.length;k++){
+        console.log(customA.item(k).getAttribute("data-customAttr"))
+      }
+      for(let l = 0 ; l<customA.length;l++){ 
+        console.log(customA.item(l).nodeName);
+      }
     }
 
     getCustomAttribute();
