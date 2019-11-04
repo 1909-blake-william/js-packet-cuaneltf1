@@ -11,7 +11,21 @@
 // Define function: fib(n)
 // Return the nth number in the fibonacci sequence.
 
+function fib(n) {
+        if(n == 0||n == 1){
+            console.log('n = ' + n);
+        }else{
+            let fib = new Array(n+1);
+            fib[0] = 0;
+            fib[1] = 1;
+            for (let i = 2; i <= fib.length-1; i++) {
+            fib[i] = fib[i-1] + fib[i-2];
+            console.log(fib[n]);
+            }
+        }
+}
 
+fib(6);
 
 // 2. Bubble Sort
 // Define function: bubbleSort(numArray)
