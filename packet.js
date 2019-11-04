@@ -29,7 +29,19 @@ fib(42);
 // Define function: reverseStr(someStr)
 // Reverse and return the String.
 
+function reverseStr(someStr){
+    let rev = someStr.split("");
+    console.log(rev);
+    console.log(rev[0])
+    let order = new Array(rev.length);
+    console.log(order.length);
+    for(let i = rev.length-1, j = 0; i>=0;i--,j++){
+        order[j] = rev[i];
+        console.log(order.join(""));
+    }
+}
 
+reverseStr("stilleto");
 
 // 4. Factorial
 // Define function: factorial(someNum)
