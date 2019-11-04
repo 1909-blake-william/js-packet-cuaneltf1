@@ -16,7 +16,7 @@ function fib(n) {
         }
 }
 
-fib(69);
+fib(42);
 
 // 2. Bubble Sort
 // Define function: bubbleSort(numArray)
