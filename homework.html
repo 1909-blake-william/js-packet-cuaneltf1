@@ -104,7 +104,7 @@
     // Find the html element that contains "USA" in the data-customAttr.
     // Print that element's contents.
     function getUSA(){
-        let usOfAContents = document.querySelector('[data-customAttr').innerHTML;
+        let usOfAContents = document.querySelector('[data-customAttr]').innerHTML;
         console.log(usOfAContents);
     }
 	  
@@ -122,18 +122,21 @@
         }
     }
     getPeopleInSales();
-/*  Ask: What does this mean
+
     // 3. Click Here
     // Define function getAnchorChildren()
     // Find all anchor elements with a <span> child.
     // Print the contents of <span>
 
     function getAnchorChildren(){
-        let hasChild = document.getElementsByTagName("span");
-        console.log(hasChild);
+    	let hasChild = document.getElementsByTagName("a");
+    	for(let i = 0 ; i<hasChild.length;i++){
+	if(hasChild.item(i).childNodes.item(1) != null)
+	console.log(hasChild.item(i).childNodes.item(1).firstChild);
+    	}
     }
     getAnchorChildren();
-*/
+
     // 4. Hobbies
     // Define function getHobbies()
     // Find all checked options in the 'skills' select element.
