@@ -54,7 +54,22 @@ reverseStr("stilleto");
 // Return the substring contained between offset and (offset + length) inclusively.
 // If incorrect input is entered, use the alert function and describe why the input was incorrect.
 
+function substring(someStr, length, offset) {
+    console.log(someStr);
+    console.log(someStr.length);
+    if (isNaN(someStr) == false) {
+        console.log('This is a number and not a string, please put in a string');
+    } else if (length > someStr.length) {
+        console.log('The length is longer than the string, please put a length within your string scope');
+    } else if (offset > someStr.length || offset < 0) {
+        console.log(`Your offset value isn't within your string range, please put in a valid input`)
+    } else {
+        let z = someStr.substring(length, offset);
+        console.log(z);
+    }
+}
 
+substring('times', 1, 2);
 
 // 6. Even Number
 // Define function: isEven(someNum)
