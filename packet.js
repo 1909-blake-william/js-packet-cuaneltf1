@@ -205,9 +205,25 @@ spliceElement([3,6,6,3,7,3]);
 // The following line should set a Person object to the variable john:
 // 	let john = new Person("John", 30);
 
+function Person(name, age){
+    this.name = name;
+    this.age = age;
+}
+
+let john = new Person("Bob",21);
+
+console.log(john);
 
 // 13. Defining an object using an object literal
 // Define function getPerson(name, age)
 // The following line should set a Person object to the variable john:
 // 	let john = getPerson("John", 30);
 
+function getPerson(name, age){
+    let john = {
+        name, age
+    };
+    console.log(john);
+}
+
+getPerson('Tom', 42);
