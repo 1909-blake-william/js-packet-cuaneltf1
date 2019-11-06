@@ -192,6 +192,13 @@ deleteElement([3,6,1,4,6,4]);
 // Print length
 // The lengths should be one less than the original length.
 
+function spliceElement(someArr){
+    console.log(someArr.length);
+    someArr.splice(2, 1);
+    console.log(someArr.length);
+}
+
+spliceElement([3,6,6,3,7,3]);
 
 // 12. Defining an object using a constructor
 // Define a function Person(name, age)
