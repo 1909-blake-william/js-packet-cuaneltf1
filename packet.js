@@ -177,6 +177,13 @@ isPalindrome('aabbcbbaa');
 // Print length
 // The lengths should be the same.
 
+function deleteElement(someArr){
+    console.log(someArr.length);
+    delete someArr[2];
+    console.log(someArr.length);
+}
+
+deleteElement([3,6,1,4,6,4]);
 
 // 11. Splice Element
 // Define function spliceElement(someArr)
