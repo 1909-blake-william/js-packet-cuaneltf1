@@ -81,6 +81,41 @@ substring('times', 1, 2);
 // Define function isPalindrome(someStr)
 // Return true if someStr is a palindrome, otherwise return false
 
+function isPalindrome(someStr) {
+    let split = someStr.split("");
+    if (split.length % 2 != 0) {
+        let equalizer = split.splice(Math.floor(someStr.length / 2), 1);
+        let left1 = new Array(split.length / 2);
+        let right1 = new Array(split.length / 2);
+        let tOrF1 = false;
+        for (let i = 0, j = 0, k = split.length - 1; i < split.length / 2, k > split.length / 2 - 1; i++ , j++ , k--) {
+            left1[j] = split[i];
+            right1[j] = split[k];
+            if (left1[j] != right1[j]) {
+                tOrF1 = someStr + ' is not palindrome';
+            } else {
+                tOrF1 = someStr + ' is a palindrom';
+            }
+        }
+        console.log(tOrF1);
+    } else {
+        let left2 = new Array(split.length / 2);
+        let right2 = new Array(split.length / 2);
+        let tOrF2 = false;
+        for (let i = 0, j = 0, k = split.length - 1; i < split.length / 2, k > split.length / 2 - 1; i++ , j++ , k--) {
+            left2[j] = split[i];
+            right2[j] = split[k];
+            if (left2[j] != right2[j]) {
+                tOrF2 = someStr + ' is not palindrome';
+            } else {
+                tOrF2 = someStr + ' is a palindrom';
+            }
+        }
+        console.log(tOrF2);
+    }
+}
+
+isPalindrome('aabbcbbaa');
 
 // 8. Shapes
 // Define function: printShape(shape, height, character)
