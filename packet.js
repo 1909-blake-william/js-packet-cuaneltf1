@@ -76,6 +76,31 @@ substring('times', 1, 2);
 // Return true if even, false if odd.
 // Do not use % operator.
 
+function isEven(someNum){
+    let abs = Math.abs(someNum);
+    let breakEven = [];
+    let z;
+    for(let  i = 0; i<=abs;i++){
+        if(abs == 2){
+            z = 'Two is even';
+        }else{
+            y = abs/i;
+            if(Number.isInteger(y)===true){
+                breakEven.unshift(y);
+            }
+        }
+        if(breakEven.length>2 || someNum == -2){
+            z = someNum + ' is even';
+        }else{
+            z = someNum + ' is odd';
+        }
+    }
+    console.log(z);
+}
+
+isEven(-3);
+isEven(0);
+isEven(16384);
 
 // 7. Palindrome
 // Define function isPalindrome(someStr)
