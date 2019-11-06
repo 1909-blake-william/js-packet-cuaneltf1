@@ -23,7 +23,19 @@ fib(42);
 // Use the bubble sort algorithm to sort the array.
 // Return the sorted array.
 
+function bubbleSort(numArray) {
+    for (let i = 0; i <= numArray.length-1; i++) {
+        if (numArray[i] > numArray[i+1]) {
+            let z = numArray[i];
+            numArray[i] = numArray[i+1];
+            numArray[i+1] = z;
+            return bubbleSort(numArray);
+        } 
+    }
+    console.log(numArray);
+}
 
+bubbleSort([1, 2, 1, 5, 5, 6, 1]);
 
 // 3. Reverse String
 // Define function: reverseStr(someStr)
