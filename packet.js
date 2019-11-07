@@ -176,6 +176,84 @@ isPalindrome('aabbcbbaa');
 //  ***
 //   *
 
+function printShape(shape, height, character) {
+    if (shape.length == 6 || 7 || 8) {
+        shape = shape.charAt(0).toUpperCase() + shape.substring(1);
+        //future implementation, toLower case the rest of the string in case of triaNgle
+    }
+    if (character.length > 1) {
+        console.log('character can only be a single letter, number, or symbol')
+    } else {
+        switch (shape) {
+            case "Square":
+                let box = new Array(height);
+                for (let j = 0; j < box.length; j++) {
+                    box[j] = character;
+                }
+                for (let i = 0; i < height; i++) {
+                    console.log(box.join(" "));
+                }
+                console.log("This is a square, and rectangles can be squares but squares cannot be rectangles.");
+                break;
+            case "Triangle":
+                let pyramid = new Array(height);
+                for (let k = 0; k < pyramid.length; k++) {
+                    pyramid[k] = character;
+                    console.log(pyramid.join(" "));
+                }
+                console.log("This is a triangle, and triangles inner angles always equal to 180 degrees.");
+                break;
+            case "Diamond":
+                if (height == 1) {
+                    let mmK = new Array(height);
+                    for (let o = 0; o < height; o++) {
+                        mmK[o] = character;
+                        console.log(mmK.join(""))
+                        console.log("I don't know what you were expecting chief but this is it, btw.");
+                    }
+                } else {
+                    let gem = new Array(height);
+                    for (let n = 0; n < height; n++) {
+                        gem[n] = " ";
+                    }
+                    let midPoint = Math.floor(gem.length / 2);
+                    let a = midPoint;
+                    let b = midPoint;
+                    for (let l = 0; l < midPoint + 1; l++) {
+                        if (l == 0) {
+                            gem[midPoint] = character;
+                        } else {
+                            a = a - 1;
+                            b = b + 1;
+                            gem[a] = character;
+                            gem[b] = character;
+                        }
+                        console.log(gem.join("  "));
+                    }
+
+                    for (let m = midPoint + 1; m > 1; m--) {
+                        if (m == 0) {
+                            gem[midPoint] = character;
+                        } else {
+                            gem[a] = " ";
+                            gem[b] = " ";
+                            a = a + 1;
+                            b = b - 1;
+                        }
+                        console.log(gem.join("  "));
+                    }
+                }
+                console.log("This is a diamond, the strongest material known to man... for now.");
+                break;
+            default:
+                console.log('No appropriate shape found, please type in Square, Triangle, or Diamond.');
+        }
+    }
+}
+
+printShape("Square", 2, "%");
+printShape("Triangle", 7, '$');
+printShape("Diamond", 9, '*');
 
 // 9. Object literal
 // Define function traverseObject(someObj)
