@@ -59,9 +59,16 @@ reverseStr("stilleto");
 // Define function: factorial(someNum)
 // Use recursion to compute and return the factorial of someNum.
 
+function factorial(someNum){
+    if(someNum == 1){
+        return 1;
+    }else{
+        return someNum * factorial(someNum-1);
+    }
+}
 
-
-// 5. Substring
+console.log(factorial(5));
+factorial(5);// 5. Substring
 // Define function substring(someStr, length, offset)
 // Return the substring contained between offset and (offset + length) inclusively.
 // If incorrect input is entered, use the alert function and describe why the input was incorrect.
@@ -259,8 +266,17 @@ printShape("Diamond", 9, '*');
 // Define function traverseObject(someObj)
 // Print every property and it's value.
 
+function traverseObject(someObj2, someObj3, someObj) {
+    objLiteral = {
+        who: someObj2,
+        what: someObj3,
+        where: someObj
+    }
+}
 
-// 10. Delete Element
+traverseObject(3, "wammy", [1,2,3,4,5,7]);
+console.log(objLiteral);// 10. Delete Element
+
 // Define function deleteElement(someArr)
 // Print length
 // Delete the third element in the array.
@@ -293,27 +309,27 @@ spliceElement([3,6,6,3,7,3]);
 // 12. Defining an object using a constructor
 // Define a function Person(name, age)
 // The following line should set a Person object to the variable john:
-// 	let john = new Person("John", 30);
 
-function Person(name, age){
+let john = new Person("John", 30);
+
+function Person(name, age) {
     this.name = name;
     this.age = age;
 }
-
-let john = new Person("Bob",21);
 
 console.log(john);
 
 // 13. Defining an object using an object literal
 // Define function getPerson(name, age)
 // The following line should set a Person object to the variable john:
-// 	let john = getPerson("John", 30);
 
-function getPerson(name, age){
-    let john = {
-        name, age
-    };
-    console.log(john);
+let john = getPerson("John", 30);
+
+function getPerson(name, age) {
+    Person =
+        {
+            name: name,
+            age: age
+        }
 }
-
-getPerson('Tom', 42);
+console.log(Person);
