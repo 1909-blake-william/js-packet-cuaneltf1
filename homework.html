@@ -183,6 +183,8 @@
     // Put the sum in the <span> element.
     // If values cannot be added, put "Cannot add" in the <span> element
 
+    // when input with id num1 and num2 change, send those changes to span with id sum, 
+    //and if they are falsy values print Cannot add
 
     // 7. Skills Event
     // When user selects a skill, create an alert with a message similar to:
@@ -196,13 +198,21 @@
     // 	"So you like green more than blue now?"
     // In this example, green is the new value and blue is the old value.
     // Make the background color (of all favoriteColor radio buttons) the newly selected favoriteColor
-
-
+	  
+    //on click, alert "..." new value = clicked, old value = default, new value then becomes default, 
+    //make buttons new value color etc...    
+    
     // 9. Show/Hide Event
     // When user hovers over an employees name:
     // 	Hide the name if shown.
     // 	Show the name if hidden.
+	  
+    Incomplete but in an ideal world it would work
 
+    function zed(){
+      document.getElementsByClassName("empName").style.visibility = "hidden";
+    }
+    document.getElementsByClassName("empName").addEventListner(onmouseover, zed);
 
     // 10. Current Time
     // Regarding this element:
@@ -218,8 +228,17 @@
     // Regarding this element:
     // 	<p id="helloWorld">Hello, World!</p>
     // Three seconds after a user clicks on this element, change the text to a random color.
+	  
+    Incomplete but in an ideal world it would work
 
-
+    document.getElementById("helloWorld").addEventListener(onclick, setTimeout(nyan, 3000));
+    function nyan() {
+      let r = Math.floor(Math.random() * (250 - 1) + 1);
+      let g = Math.floor(Math.random() * (250 - 2) + 2);
+      let b = Math.floor(Math.random() * (250 - 3) + 3);
+      document.getElementById("helloWorld").style.color = `rgb(${r},${g},${b})`;
+    }    
+	  
     // 12. Walk the DOM
     // Define function walkTheDOM(node, func)
     // This function should traverse every node in the DOM. Use recursion.
